@@ -1,0 +1,25 @@
+# Ignora arquivos de configuração sensíveis
+.env
+
+# Dados persistentes do n8n (SQLite, configurações, etc.)
+data/
+backups/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Arquivos gerados por sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos do VS Code
+.vscode/
+
+# Docker
+**/.docker
+**/docker-compose.override.yml
+
+# Evita subir arquivos de execução ou permissões específicas
+scripts/*.sh~
