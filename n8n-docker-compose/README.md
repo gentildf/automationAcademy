@@ -82,11 +82,8 @@ Executar o n8n em nuvem com restauração automática de dados.
 
 ---
 
-## ✅ Checklist Inicial
+## ⛨️ Tarefas para aprendizado
 
--
+Com o intuito de nao so ensinar instalar o n8n via docker, tambem teremos uma are de tarefas desde iniciantes a mais complexas, de forma crescente para aprendizado.
 
----
-
-**Próximo passo sugerido:** montar a estrutura de arquivos e o `docker-compose.yml` com as variáveis de ambiente.
-
+Poderá ser encontrada nesse diretório: [tasks-for-learning](https://github.com/gentildf/automationAcademy/tree/main/n8n-docker-compose/tasks-for-learning)
