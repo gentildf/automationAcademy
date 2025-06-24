@@ -1,16 +1,28 @@
-O que esse script faz, explicado em call:
-Cria uma função chamada listar_imports.
+# 🔍 Script: listar_imports.sh
 
-A função percorre todos os arquivos .tf dentro de um diretório (incluindo subpastas de qualquer nível).
+Este script percorre todos os arquivos `.tf` dentro de um diretório e suas subpastas, buscando **comandos `terraform import` comentados** na **última linha** de cada arquivo. Esses comandos são extraídos e organizados em um arquivo de saída.
 
-Para cada arquivo .tf, ele lê a última linha.
+---
 
-Se a última linha começar com # terraform, considera que é um comentário com comando de import.
+## ✅ Objetivo
 
-Remove o # e salva:
+Automatizar a coleta de comandos `terraform import` que foram deixados como comentários no final dos arquivos `.tf`, gerando uma lista clara e pronta para execução ou revisão.
 
-O caminho completo do arquivo onde o comando foi encontrado (com # na frente);
+---
 
-O comando terraform import, formatado corretamente.
+## 🧠 Como funciona
 
-Gera tudo em um arquivo lista_imports.txt.
+1. O script entra no diretório especificado (ou no diretório atual, por padrão).
+2. Encontra todos os arquivos `.tf` dentro desse diretório e de **todas as subpastas**.
+3. Para cada arquivo `.tf`:
+   - Lê a **última linha do arquivo**;
+   - Se essa linha começar com `# terraform`, interpreta como um comando válido;
+   - Remove o `#` e salva o caminho do arquivo e o comando em um arquivo de saída.
+
+---
+
+## 📝 Exemplo de uso
+
+```bash
+chmod +x listar_imports.sh
+./listar_imports.sh /caminho/do/diretorio
