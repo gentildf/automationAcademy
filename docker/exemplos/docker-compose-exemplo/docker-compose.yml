@@ -1,0 +1,9 @@
+version: '3.8'  #Versão do schema do Compose.
+
+services:
+  app:  #Nome do serviço.
+    build: .  #Constrói a imagem a partir do Dockerfile no diretório atual.
+    container_name: docker-python-app  #Nome do container (opcional).
+    volumes:
+      - .:/app  #Mapeia os arquivos locais para dentro do container (útil para desenvolvimento).
+    command: python app.py  #Sobrescreve o CMD do Dockerfile (opcional).
